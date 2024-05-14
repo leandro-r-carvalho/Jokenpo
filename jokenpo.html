@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/style.css">
+    <script src="scripts/script.js" defer></script>
+    <title>JO-KEN-PÔ</title>
+</head>
+<body>
+    <div class="container">
+
+        <div class="entrada">
+            <h2>JO-KEN-PÔ</h2>
+            <div class="config">
+                <div class="player"><p>Nome do jogador:</p><input type="text" id="nome"></input></div>
+                <div class="opcao">
+                    <p>Melhor de:</p>
+                    <select name="melhorDe" id="melhorDe">
+                        <option value="3">3</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+            <div class="escolha"><p>Escolha a sua opção!</p></div>
+            <div class="jokenpo">
+                <!--
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                <img src="" alt="" srcset="">
+                -->
+                <div class="jo"></div>
+                <div class="ken"></div>
+                <div class="po"></div>
+            </div>
+        </div>
+
+        <div class="processamento">
+            <div class="batalha">
+                <div class="escolhaP1"></div>
+                <div class="versus"></div>
+                <div class="escolhaCom"></div>
+            </div>
+            <div class="res"><p class="vencedor">X</p><p>Venceu essa partida!</p></div>
+        </div>
+
+        <div class="saida">
+            <div class="placarFinal">
+                <div class="placar"><p>Placar</p></div>
+                <div class="resultado">
+                    <div class="p1"><p class="p1Nome">Player1</p><p class="p1Res">X</p></div>
+                    <div class="com"><p>COM1</p><p class="comRes">Y</p></div>
+                </div>
+            </div>
+            <div class="btnNovoJogo">
+                <button id="novoJogo">Jogar novamente</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

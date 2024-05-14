@@ -1,0 +1,226 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    margin: auto;
+    margin-top: 10px;
+    width: 400px;
+    height: 600px;
+    border: 5px double #000;
+}
+
+.entrada {
+    margin: auto;
+    margin-top: 7px;
+    width: 380px;
+    height: 185px;
+    border: 1px solid #000;
+}
+
+.processamento {
+    margin: auto;
+    margin-top: 7px;
+    width: 380px;
+    height: 200px;
+    border: 1px solid #000;
+}
+
+.saida {
+    margin: auto;
+    margin-top: 7px;
+    width: 380px;
+    height: 180px;
+    border: 1px solid #000;
+}
+
+/* Configurações da .entrada */
+h2{
+    margin-top: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.config {
+    margin: auto;
+    width: 320px;
+    height: 60px;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.escolha {
+    margin: auto;
+    margin-top: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.jokenpo {
+    margin: auto;
+    width: 180px;
+    height: 60px;
+    border: 1px solid #000;
+    display: flex;
+}
+
+/* Configurações da .config */
+.player {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.player p {
+    font-weight: bold;
+    width: 150px;
+}
+
+.player input {
+    width: 150px;
+    height: 20px;
+}
+
+.opcao {
+    margin-top: 5px;
+    display: flex;
+}
+
+.opcao p {
+    font-weight: bold;
+    width: 150px;
+}
+
+.opcao #melhorDe {
+    margin-left: 16px;
+    width: 50px;
+    height: 22px;
+}
+
+/* Configurações da .jokenpo */
+.jo, .ken, .po {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+}
+
+/* Configurações da .processamento */
+.batalha {
+    margin: auto;
+    margin-top: 10px;
+    width: 300px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.res {
+    margin: auto;
+    padding: 5px 0px;
+    width: 300px;
+    height: 25px;
+    display: flex;
+    justify-content:space-evenly
+}
+
+/* Configurações da .batalha */
+.escolhaP1, .escolhaCom {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+.versus {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+}
+
+/* Configurações da .res */
+.res p.vencedor {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+
+.res p {
+    font-size: 16px;
+    color: red;
+}
+
+/* Configurações da .saida */
+.placarFinal {
+    margin: auto;
+    margin-top: 10px;
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+.btnNovoJogo {
+    margin: auto;
+    margin-top: 10px;
+    width: 150px;
+    height: 40px;
+    border: 1px solid #000;
+}
+
+/* Configurações da .placarFinal */
+.placar {
+    margin: auto;
+    padding: 2px 0px;
+    width: 198px;
+    height: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #000;
+}
+
+.resultado {
+    margin: auto;
+    margin-top: 5px;
+    width: 170px;
+    height: 60px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.resultado .p1 {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultado .com {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.p1Res, .comRes {
+    margin-top: 5px;
+    color: red;
+    font-size: 1.5rem;
+}
+
+#novoJogo {
+    width: 150px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+}
+
+#novoJogo:hover {
+    background-color: #616161;
+    color: #000;
+}

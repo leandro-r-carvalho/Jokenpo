@@ -13,10 +13,10 @@
         <div class="entrada">
             <h2>JO-KEN-PÔ</h2>
             <div class="config">
-                <div class="player"><p>Nome do jogador:</p><input type="text" id="nome"></input></div>
+                <div class="player"><p>Nome do jogador:</p><input type="text" id="nome" onblur="nomePlayer()"></input></div>
                 <div class="opcao">
                     <p>Melhor de:</p>
-                    <select name="melhorDe" id="melhorDe">
+                    <select name="melhorDe" id="melhorDe" onblur="numeroTentativa()">
                         <option value="3">3</option>
                         <option value="5">5</option>
                         <option value="10">10</option>
@@ -25,24 +25,19 @@
             </div>
             <div class="escolha"><p>Escolha a sua opção!</p></div>
             <div class="jokenpo">
-                <!--
-                <img src="" alt="" srcset="">
-                <img src="" alt="" srcset="">
-                <img src="" alt="" srcset="">
-                -->
-                <div class="jo"></div>
-                <div class="ken"></div>
-                <div class="po"></div>
+                <div class="jo"><img src="imagens/pedra.png" alt="Pedra" onclick="escolhaPlayer1(0)"></div>
+                <div class="ken"><img src="imagens/papel.png" alt="Papel" onclick="escolhaPlayer1(1)"></div>
+                <div class="po"><img src="imagens/tesoura.png" alt="Tesoura" onclick="escolhaPlayer1(2)"></div>
             </div>
         </div>
 
         <div class="processamento">
             <div class="batalha">
-                <div class="escolhaP1"></div>
-                <div class="versus"></div>
-                <div class="escolhaCom"></div>
+                <div class="escolhaP1"><img src="imagens/pedra.png" alt="Escolha Player" id="escolhaP1"></div>
+                <div class="versus"><img src="imagens/versus.png" alt="Versus"></div>
+                <div class="escolhaCom"><img src="imagens/pedra.png" alt="Escolha Computador" id="escolhaCom"></div>
             </div>
-            <div class="res"><p class="vencedor">X</p><p>Venceu essa partida!</p></div>
+            <div class="res"></div>
         </div>
 
         <div class="saida">

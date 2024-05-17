@@ -7,7 +7,7 @@
     margin: auto;
     margin-top: 10px;
     width: 400px;
-    height: 600px;
+    height: 620px;
     border: 5px double #000;
 }
 
@@ -23,7 +23,7 @@
     margin: auto;
     margin-top: 7px;
     width: 380px;
-    height: 200px;
+    height: 180px;
     border: 1px solid #000;
 }
 
@@ -31,7 +31,7 @@
     margin: auto;
     margin-top: 7px;
     width: 380px;
-    height: 180px;
+    height: 220px;
     border: 1px solid #000;
 }
 
@@ -52,18 +52,20 @@ h2{
 }
 
 .escolha {
+    display: none;
     margin: auto;
     margin-top: 5px;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
+    display: none;
 }
 
 .jokenpo {
     margin: auto;
     width: 190px;
     height: 60px;
-    display: flex;
+    display: none;
 }
 
 /* Configurações da .config */
@@ -96,7 +98,7 @@ h2{
 
 .opcao #melhorDe {
     margin-left: 16px;
-    width: 50px;
+    width: 100px;
     height: 22px;
 }
 
@@ -132,9 +134,14 @@ h2{
 
 .res {
     margin: auto;
+    margin-top: -10px;
     padding: 5px 0px;
     width: 300px;
     height: 25px;
+    /*display: none;*/
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
     display: flex;
     justify-content:space-evenly
 }
@@ -160,21 +167,12 @@ h2{
     height: 50px;
 }
 
-/* Configurações da .res */
-.res {
-    /*display: none;*/
-    font-size: 18px;
-    font-weight: bold;
-    color: red;
-}
-
 /* Configurações da .saida */
 .placarFinal {
     margin: auto;
     margin-top: 10px;
     width: 200px;
     height: 100px;
-    border: 1px solid #000;
 }
 
 .btnNovoJogo {
@@ -182,7 +180,6 @@ h2{
     margin-top: 10px;
     width: 150px;
     height: 40px;
-    border: 1px solid #000;
 }
 
 /* Configurações da .placarFinal */
@@ -192,9 +189,8 @@ h2{
     width: 198px;
     height: 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    border: 1px solid #000;
 }
 
 .resultado {
@@ -206,18 +202,12 @@ h2{
     justify-content:space-evenly;
 }
 
-.resultado .p1 {
+.resultado .p1, .resultado .com {
     margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.resultado .com {
-    margin-top: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-weight: bold;
 }
 
 .p1Res, .comRes {
@@ -226,16 +216,28 @@ h2{
     font-size: 1.5rem;
 }
 
+.vencedorFinal {
+    margin-top: 5px;
+    color: red;
+    font-size: 1rem;
+    text-align: center;
+}
+
 #novoJogo {
     width: 150px;
     height: 40px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: bold;
     background-color: #000;
     color: #fff;
+    display: none;
 }
 
 #novoJogo:hover {
     background-color: #616161;
     color: #000;
+}
+
+#proximoJogo {
+    display: none;
 }

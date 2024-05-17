@@ -11,6 +11,14 @@ const melhorDe = document.getElementById("melhorDe");
 var numTentativas=0;
 function numeroTentativa() {
     numTentativas = Number(melhorDe.value);
+    iniciarJogo();
+}
+
+const fraseInicio = document.querySelector(".escolha");
+const jokenpoInicio = document.querySelector(".jokenpo");
+function iniciarJogo(){
+    fraseInicio.style.display = "block";
+    jokenpoInicio.style.display = "flex";
 }
 
 //pegar a informação de qual imagem foi clicada
@@ -87,13 +95,50 @@ function vencedor(p1, com) {
 //Anotando o placar do jogo
 const p1Res = document.querySelector(".p1Res");
 const comRes = document.querySelector(".comRes");
+const vencedorFinal = document.querySelector("#vencedorFinal");
+const proximoJogo = document.getElementById("proximoJogo");
+const btnNovoJogo = document.querySelector("#novoJogo");
+
 function atualizarPlacar(placar1, placar2){
     p1Res.textContent = placar1;
     comRes.textContent = placar2;
     if (placar1 == numTentativas){
-        alert(`${nome} venceu a melhor de ${numTentativas}`);
+        vencedorFinal.innerHTML =`Você venceu a melhor de ${numTentativas} pelo placar de ${placar1} x ${placar2}`
+        fraseInicio.style.display = "none";
+        jokenpoInicio.style.display = "none"
+        proximoJogo.style.display = "block";
+        btnNovoJogo.style.display = "block";
+        //alert(`Você venceu a melhor de ${numTentativas}`);
     }
     if (placar2 == numTentativas){
-        alert(`O computador venceu a melhor de ${numTentativas}`);
+        vencedorFinal.innerHTML =`O computador venceu a melhor de ${numTentativas} pelo placar de ${placar1} x ${placar2}`
+        fraseInicio.style.display = "none";
+        jokenpoInicio.style.display = "none"
+        proximoJogo.style.display = "block";
+        btnNovoJogo.style.display = "block";
+        //alert(`O computador venceu a melhor de ${numTentativas}`);
     }
+    
 }
+
+//Configurar o botão novo Jogo
+function novoJogo() {
+    //Limpando o nome no input e Nome player
+    nome.value = "";
+    p1Nome.innerHTML = "Player1";
+    //Limpando opção MelhorDe
+    melhorDe.value = "Selecione";
+    //Escondendo itens novamente
+    proximoJogo.style.display = "none";
+    btnNovoJogo.style.display = "none";
+    //Voltando os itens iniciais de escolha
+    document.querySelector("#escolhaP1").src = "imagens/jokenpo.png";
+    document.querySelector("#escolhaCom").src = "imagens/jokenpo.png";
+    //Zerando o resultado e placar
+    res.innerHTML = "";
+    p1Res.textContent = 0;
+    comRes.textContent = 0;
+    //Atualizando as frases iniciais
+    vencedorFinal.innerHTML ="Preparando para uma emocionante partida de JO-KEN-PÔ";  
+}
+btnNovoJogo.addEventListener("click", novoJogo)

@@ -16,7 +16,8 @@
                 <div class="player"><p>Nome do jogador:</p><input type="text" id="nome" onblur="nomePlayer()"></input></div>
                 <div class="opcao">
                     <p>Melhor de:</p>
-                    <select name="melhorDe" id="melhorDe" onblur="numeroTentativa()">
+                    <select name="melhorDe" id="melhorDe" onchange="numeroTentativa()">
+                        <option value="0">Selecione</option>
                         <option value="3">3</option>
                         <option value="5">5</option>
                         <option value="10">10</option>
@@ -33,9 +34,9 @@
 
         <div class="processamento">
             <div class="batalha">
-                <div class="escolhaP1"><img src="imagens/pedra.png" alt="Escolha Player" id="escolhaP1"></div>
+                <div class="escolhaP1"><img src="imagens/jokenpo.png" alt="Escolha Player" id="escolhaP1"></div>
                 <div class="versus"><img src="imagens/versus.png" alt="Versus"></div>
-                <div class="escolhaCom"><img src="imagens/pedra.png" alt="Escolha Computador" id="escolhaCom"></div>
+                <div class="escolhaCom"><img src="imagens/jokenpo.png" alt="Escolha Computador" id="escolhaCom"></div>
             </div>
             <div class="res"></div>
         </div>
@@ -44,10 +45,11 @@
             <div class="placarFinal">
                 <div class="placar"><p>Placar</p></div>
                 <div class="resultado">
-                    <div class="p1"><p class="p1Nome">Player1</p><p class="p1Res">X</p></div>
-                    <div class="com"><p>COM1</p><p class="comRes">Y</p></div>
+                    <div class="p1"><p class="p1Nome">Player1</p><p class="p1Res"></p></div>
+                    <div class="com"><p>COM</p><p class="comRes"></p></div>
                 </div>
             </div>
+            <div class="vencedorFinal"><p id="vencedorFinal">Preparando para uma emocionante partida de JO-KEN-PÔ</p> <p id="proximoJogo">Para Iniciar um novo Jogo clique no botão abaixo.</p></div>
             <div class="btnNovoJogo">
                 <button id="novoJogo">Jogar novamente</button>
             </div>
